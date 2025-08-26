@@ -11,7 +11,7 @@ public class Item implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long Id;
+    private long id;
 
     @Column(name = "nome", nullable = false, length = (80))
     private String nome;
@@ -22,20 +22,12 @@ public class Item implements Serializable {
     @Column(name = "descricao", nullable = false, length = (200))
     private String descricao;
 
-    public int getId() {
-        return Id;
+    public long getId() {
+        return id;
     }
 
-    public void setId(int id) {
-        Id = id;
-    }
-
-    public float getValor() {
-        return valor;
-    }
-
-    public void setValor(float valor) {
-        this.valor = valor;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -44,6 +36,14 @@ public class Item implements Serializable {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public float getValor() {
+        return valor;
+    }
+
+    public void setValor(float valor) {
+        this.valor = valor;
     }
 
     public String getDescricao() {
